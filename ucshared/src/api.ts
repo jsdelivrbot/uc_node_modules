@@ -1228,6 +1228,7 @@ export interface PgCloudCellarRecord {
     "region"?: string;
     "appel"?: string;
     "states"?: Array<string>;
+    "itemDetailGuid"?: string;
     "sku"?: string;
     "urlKey"?: string;
     "retailPrice"?: number;
@@ -1363,6 +1364,7 @@ export interface ShipOrderResult {
     "protectShipmentValue"?: number;
     "shipMethods"?: Array<ShippingMethodModel>;
     "iceAvailable"?: boolean;
+    "icePrice"?: number;
     "promotionsUsed"?: Array<CheckoutPromoCodeModel>;
     "promoValue"?: number;
     "accountBalanceUsed"?: number;
