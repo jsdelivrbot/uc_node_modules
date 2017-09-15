@@ -1,0 +1,111 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "isomorphic-style-loader-utils@^1.0.7",
+        "scope": null,
+        "escapedName": "isomorphic-style-loader-utils",
+        "name": "isomorphic-style-loader-utils",
+        "rawSpec": "^1.0.7",
+        "spec": ">=1.0.7 <2.0.0",
+        "type": "range"
+      },
+      "C:\\Users\\ucadmin\\Documents\\uc\\www"
+    ]
+  ],
+  "_from": "isomorphic-style-loader-utils@>=1.0.7 <2.0.0",
+  "_id": "isomorphic-style-loader-utils@1.0.7",
+  "_inCache": true,
+  "_location": "/isomorphic-style-loader-utils",
+  "_nodeVersion": "8.0.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/isomorphic-style-loader-utils-1.0.7.tgz_1496291153826_0.8727233421523124"
+  },
+  "_npmUser": {
+    "name": "tobias-walle",
+    "email": "tobias.walle@gmail.com"
+  },
+  "_npmVersion": "5.0.0",
+  "_phantomChildren": {
+    "@types/history": "3.2.1",
+    "@types/react": "15.0.38"
+  },
+  "_requested": {
+    "raw": "isomorphic-style-loader-utils@^1.0.7",
+    "scope": null,
+    "escapedName": "isomorphic-style-loader-utils",
+    "name": "isomorphic-style-loader-utils",
+    "rawSpec": "^1.0.7",
+    "spec": ">=1.0.7 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/isomorphic-style-loader-utils/-/isomorphic-style-loader-utils-1.0.7.tgz",
+  "_shasum": "1117b95a7e6b5ec442259668346250497f86f956",
+  "_shrinkwrap": null,
+  "_spec": "isomorphic-style-loader-utils@^1.0.7",
+  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\www",
+  "author": {
+    "name": "Tobias Walle"
+  },
+  "bugs": {
+    "url": "https://github.com/TobiasWalle/isomorphic-style-loader-utils/issues"
+  },
+  "dependencies": {
+    "@types/react-router": "^4.0.9",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4"
+  },
+  "description": "Utilities for the 'isomorphic-style-loader'",
+  "devDependencies": {
+    "@types/prop-types": "^15.5.1",
+    "@types/react": "^15.0.24",
+    "rimraf": "^2.5.4",
+    "typescript": "^2.3.2"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-D+cMGJxKgFELoVnE+RVsR/fJlYXvz9DpTTPSc6vUBz8q+B4wcoKpNbP6UOkQJEuBO6YqCbBGtCf1WXAEmXA/VQ==",
+    "shasum": "1117b95a7e6b5ec442259668346250497f86f956",
+    "tarball": "https://registry.npmjs.org/isomorphic-style-loader-utils/-/isomorphic-style-loader-utils-1.0.7.tgz"
+  },
+  "files": [
+    "lib"
+  ],
+  "gitHead": "07d3969ed6ad14cd39ad66bce210b1a1c3850dea",
+  "homepage": "https://github.com/TobiasWalle/isomorphic-style-loader-utils#readme",
+  "keywords": [
+    "isomorphic-style-loader",
+    "webpack",
+    "typescript"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "maintainers": [
+    {
+      "name": "tobias-walle",
+      "email": "tobias.walle@gmail.com"
+    }
+  ],
+  "name": "isomorphic-style-loader-utils",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "isomorphic-style-loader-utils": ">=1.0.0"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TobiasWalle/isomorphic-style-loader-utils.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf lib",
+    "prepublish": "npm run clean && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "typings": "lib/index",
+  "version": "1.0.7"
+}

@@ -1,0 +1,91 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@types/reactstrap@4.3.5",
+        "scope": "@types",
+        "escapedName": "@types%2freactstrap",
+        "name": "@types/reactstrap",
+        "rawSpec": "4.3.5",
+        "spec": "4.3.5",
+        "type": "version"
+      },
+      "C:\\Users\\ucadmin\\Documents\\uc\\www"
+    ]
+  ],
+  "_from": "@types/reactstrap@4.3.5",
+  "_id": "@types/reactstrap@4.3.5",
+  "_inCache": true,
+  "_location": "/@types/reactstrap",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/reactstrap-4.3.5.tgz_1497019934193_0.9709368795156479"
+  },
+  "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+  },
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@types/reactstrap@4.3.5",
+    "scope": "@types",
+    "escapedName": "@types%2freactstrap",
+    "name": "@types/reactstrap",
+    "rawSpec": "4.3.5",
+    "spec": "4.3.5",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/reactstrap/-/reactstrap-4.3.5.tgz",
+  "_shasum": "962d402806b6d024a6319807d47a217adb89f939",
+  "_shrinkwrap": null,
+  "_spec": "@types/reactstrap@4.3.5",
+  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\www",
+  "contributors": [
+    {
+      "name": "Ali Hammad Baig",
+      "url": "https://github.com/alihammad"
+    },
+    {
+      "name": "Marco Falkenberg",
+      "url": "https://github.com/mfal"
+    },
+    {
+      "name": "Danilo Barros",
+      "url": "https://github.com/danilobjr"
+    }
+  ],
+  "dependencies": {
+    "@types/tether": "*"
+  },
+  "description": "TypeScript definitions for reactstrap",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-3Nn2ZZWhfoQsyrwwX7hQ7gDQbsN1M4aLSPAa5ojJCS5Hwi2YFtaOCgc9Y5GIDVXF2pT9XeuthsmqtqHmnYVm7Q==",
+    "shasum": "962d402806b6d024a6319807d47a217adb89f939",
+    "tarball": "https://registry.npmjs.org/@types/reactstrap/-/reactstrap-4.3.5.tgz"
+  },
+  "license": "MIT",
+  "main": "",
+  "maintainers": [
+    {
+      "name": "types",
+      "email": "ts-npm-types@microsoft.com"
+    }
+  ],
+  "name": "@types/reactstrap",
+  "optionalDependencies": {},
+  "peerDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+  },
+  "scripts": {},
+  "typeScriptVersion": "2.2",
+  "typesPublisherContentHash": "3be516e528e6a470d5bc17f1be5d4074e7da4a59bf8e90cb8e4af77092ac7b77",
+  "version": "4.3.5"
+}

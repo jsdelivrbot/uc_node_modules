@@ -1,0 +1,26 @@
+{
+    "authors": "Marian Palkus <https://github.com/MarianPalkus>, Cap3 <http://www.cap3.de>",
+    "libraryDependencies": [
+        "redux"
+    ],
+    "moduleDependencies": [
+        "redux"
+    ],
+    "libraryMajorVersion": 0,
+    "libraryMinorVersion": 0,
+    "libraryName": "Redux Mock Store",
+    "typingsPackageName": "redux-mock-store",
+    "projectName": "https://github.com/arnaudbenard/redux-mock-store",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "sourceBranch": "types-2.0",
+    "kind": "ModuleAugmentation",
+    "globals": [],
+    "declaredModules": [
+        "redux-mock-store"
+    ],
+    "files": [
+        "index.d.ts"
+    ],
+    "hasPackageJson": true,
+    "contentHash": "922c95f38dd7a3729f798a01d909221e4694b40314d514e3ef014a5cbf3f3381"
+}

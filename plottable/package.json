@@ -1,0 +1,111 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "plottable@https://github.com/bherila/plottable/releases/download/bherila/plottable-3.6.0.tgz",
+        "scope": null,
+        "escapedName": "plottable",
+        "name": "plottable",
+        "rawSpec": "https://github.com/bherila/plottable/releases/download/bherila/plottable-3.6.0.tgz",
+        "spec": "https://github.com/bherila/plottable/releases/download/bherila/plottable-3.6.0.tgz",
+        "type": "remote"
+      },
+      "C:\\Users\\ucadmin\\Documents\\uc\\www"
+    ]
+  ],
+  "_from": "https://github.com/bherila/plottable/releases/download/bherila/plottable-3.6.0.tgz",
+  "_id": "plottable@3.6.0",
+  "_inCache": true,
+  "_location": "/plottable",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "plottable@https://github.com/bherila/plottable/releases/download/bherila/plottable-3.6.0.tgz",
+    "scope": null,
+    "escapedName": "plottable",
+    "name": "plottable",
+    "rawSpec": "https://github.com/bherila/plottable/releases/download/bherila/plottable-3.6.0.tgz",
+    "spec": "https://github.com/bherila/plottable/releases/download/bherila/plottable-3.6.0.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://github.com/bherila/plottable/releases/download/bherila/plottable-3.6.0.tgz",
+  "_shasum": "6d9c78bfe09619d4e8b44f6b5ee007021329ef94",
+  "_shrinkwrap": null,
+  "_spec": "plottable@https://github.com/bherila/plottable/releases/download/bherila/plottable-3.6.0.tgz",
+  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\www",
+  "author": {
+    "name": "Palantir Technologies"
+  },
+  "bugs": {
+    "url": "https://github.com/bherila/plottable/issues"
+  },
+  "dependencies": {
+    "@types/d3": "^4.5.0",
+    "d3": "^4.5.0",
+    "d3-ease": "^1.0.0",
+    "d3-shape": "^1.0.0",
+    "typesettable": "^3.0.2"
+  },
+  "description": "A modular charting library built on D3",
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/d3-selection-multi": "1.0.4",
+    "@types/mocha": "^2.2.27",
+    "@types/sinon": "^1.16.36",
+    "chai": "2.0.0",
+    "circle-github-bot": "0.3.0",
+    "grunt": "~0.4.5",
+    "grunt-blanket-mocha": "^1.0.0",
+    "grunt-bump": "0.7.0",
+    "grunt-cli": "0.1.13",
+    "grunt-contrib-connect": "0.11.2",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-eslint": "17.3.1",
+    "grunt-exec": "1.0.1",
+    "grunt-jscs": "2.6.0",
+    "grunt-saucelabs": "8.6.2",
+    "jquery": "2.1.0",
+    "load-grunt-tasks": "3.4.0",
+    "mocha": "2.2.5",
+    "npm-run-all": "4.0.1",
+    "requirejs": "2.1.18",
+    "sinon": "^2.1.0",
+    "tslint": "4.5.1",
+    "typescript": "2.1.5",
+    "webpack": "2.2.1",
+    "webpack-dev-server": "2.3.0",
+    "webpack-merge": "^4.1.0"
+  },
+  "homepage": "https://github.com/bherila/plottable#readme",
+  "license": "MIT",
+  "main": "build/src/index.js",
+  "name": "plottable",
+  "optionalDependencies": {},
+  "readme": "# Plottable [![Builds](https://api.travis-ci.org/repositories/palantir/plottable.svg?branch=master)](https://travis-ci.org/palantir/plottable) [![Join the chat at https://gitter.im/palantir/plottable](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/palantir/plottable?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\r\n\r\nPlottable is a library of chart components for creating flexible, custom charts for websites. It is built on top of [D3.js](http://d3js.org/) and provides higher-level pieces, like plots, gridlines, and axes. As such, it's easier to quickly build charts than with D3, and the charts are much\r\nmore flexible than standard-template charts provided by charting libraries. You can think of Plottable as a \"D3 for Charts\" &mdash; it is not a charting library but rather a library of chart components. Check out examples of Plottable on our website's [examples page](http://plottablejs.org/examples/).\r\n\r\n## Philosophy\r\n\r\nPlottable's core philosophy is \"Composition over Configuration\", so a lot of the API flexibility is in choosing which `Components` to use, and how to arrange them in `Tables`, rather than setting high-level properties on the charts. If you find you need a feature that doesn't exist, consider writing a new `Component` that implements the functionality. This way, you can get your custom functionality and still benefit from the rest of the library.\r\n\r\nPlottable is used and developed at [Palantir Technologies](http://palantir.com/). It's developed in [TypeScript](http://typescriptlang.org/) and distributed in ES5 JavaScript.\r\n\r\n## Quick Start\r\n\r\n- Get Plottable:\r\n  - npm: `npm install --save plottable`\r\n  - yarn: `yarn add plottable`\r\n  - [unpkg](https://unpkg.com/plottable/plottable.min.js)\r\n- [Check out examples](http://plottablejs.org/examples/)\r\n- [Read the tutorials](http://plottablejs.org/tutorials/)\r\n- [Visit the website, plottablejs.org](http://plottablejs.org/)\r\n\r\n## Upgrading to v1.0.0\r\n\r\nIf you are upgrading from a pre-v1.0.0 version of Plottable to v1.0.0 or later, please use the [Upgrade Guide](https://github.com/palantir/plottable/wiki/Upgrading-to-1.0.0) on the wiki.\r\n\r\n## Upgrading to v2.0.0\r\n\r\nCheck out the full list of changes between v1.16.2 and [v2.0.0](https://github.com/palantir/plottable/wiki/2.0.0-Changes).\r\n\r\n## Upgrading to v3.0.0\r\n\r\nCheck out the full list of changes between v2.9.0 and [v3.0.0](https://github.com/palantir/plottable/wiki/Upgrading-to-3.0.0).\r\n\r\n## We Want To Help!\r\n\r\nIf you run into any problems using Plottable, please let us know. We want Plottable to be easy-to-use, so if you are getting confused, it is our fault, not yours. [Create an issue](https://github.com/palantir/plottable/issues) and we'll be happy to help you out, or drop by our [Gitter room](https://gitter.im/palantir/plottable).\r\n\r\n## Development\r\n\r\n- Clone the repo\r\n- Install local dependencies `yarn install`\r\n- Run `yarn build` to build the dependencies\r\n- Run `yarn start` and it will spin up a server (pointed at http://localhost:9999) and begin compiling the typescript code\r\n- Navigate to `http://localhost:9999/quicktests/` and choose a directory to view visual tests\r\n\r\n## Contributing\r\n\r\n- Write your code\r\n- Add tests for new functionality, and please add some quicktests too\r\n- Run `yarn test` and verify it completes with no warnings or failures\r\n- Submit a pull request and sign the CLA when prompted by our bot\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bherila/plottable.git"
+  },
+  "scripts": {
+    "build": "npm-run-all -p lint:tslint build:tsc -s build:webpack",
+    "build:tsc": "tsc -p .",
+    "build:webpack": "webpack",
+    "check_version": "echo ${npm_package_version} $(npm view ${npm_package_name} version) | awk '{ if ($1 == $2) { exit 1 }}'",
+    "clean": "rm -rf build",
+    "dist": "npm-run-all clean build:tsc dist:sed-version",
+    "dist:sed-version": "sed -i.bak -e \"s/exports.version = __VERSION__/exports.version = \\\"${npm_package_version}\\\"/\" build/src/core/version.js",
+    "lint": "npm run lint:tslint",
+    "lint:tslint": "tslint --project tsconfig.json --type-check",
+    "start": "npm-run-all -p start:update-quicktests start:watch-tsc start:watch-quicktests start:webpack-dev-server",
+    "start:update-quicktests": "grunt update-quicktests",
+    "start:watch-quicktests": "grunt watch-quicktests",
+    "start:watch-tsc": "tsc -w -p .",
+    "start:webpack-dev-server": "webpack-dev-server",
+    "test": "grunt test-travis"
+  },
+  "typings": "build/src/index.d.ts",
+  "version": "3.6.0"
+}

@@ -1,0 +1,26 @@
+{
+    "authors": "Petryshyn Sergii <https://github.com/mc-petry>",
+    "definitionFilename": "index.d.ts",
+    "libraryDependencies": [],
+    "moduleDependencies": [
+        "base16",
+        "react"
+    ],
+    "libraryMajorVersion": "1",
+    "libraryMinorVersion": "0",
+    "libraryName": "redux-devtools-log-monitor 1.0.11",
+    "typingsPackageName": "redux-devtools-log-monitor",
+    "projectName": "https://github.com/gaearon/redux-devtools-log-monitor",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "sourceBranch": "types-2.0",
+    "kind": "ProperModule",
+    "globals": [],
+    "declaredModules": [
+        "redux-devtools-log-monitor"
+    ],
+    "files": [
+        "index.d.ts"
+    ],
+    "hasPackageJson": false,
+    "contentHash": "d056346fcd79a7182da71f87e60c0f5d0d8380516b0adae94ce8ced086978b2d"
+}

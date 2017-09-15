@@ -1,0 +1,46 @@
+{
+  "_from": "@types/credit-card-type@^5.0.1",
+  "_id": "@types/credit-card-type@5.0.1",
+  "_inBundle": false,
+  "_integrity": "sha1-IQjzbDHLS91sW6WtJ2+fKaA8Gy8=",
+  "_location": "/@types/credit-card-type",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@types/credit-card-type@^5.0.1",
+    "name": "@types/credit-card-type",
+    "escapedName": "@types%2fcredit-card-type",
+    "scope": "@types",
+    "rawSpec": "^5.0.1",
+    "saveSpec": null,
+    "fetchSpec": "^5.0.1"
+  },
+  "_requiredBy": [
+    "/ucshared"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/credit-card-type/-/credit-card-type-5.0.1.tgz",
+  "_shasum": "2108f36c31cb4bdd6c5ba5ad276f9f29a03c1b2f",
+  "_spec": "@types/credit-card-type@^5.0.1",
+  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\www\\node_modules\\ucshared",
+  "author": {
+    "name": "Karol Janyst",
+    "email": "https://github.com/LKay"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "TypeScript definitions for Credit Card Type",
+  "license": "MIT",
+  "main": "",
+  "name": "@types/credit-card-type",
+  "peerDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+  },
+  "scripts": {},
+  "typeScriptVersion": "2.0",
+  "typesPublisherContentHash": "bb580837d0ec419ab342e5b53b2558ac72544163d76593f2c50bcfdf9183c6e6",
+  "version": "5.0.1"
+}

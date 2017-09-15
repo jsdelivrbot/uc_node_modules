@@ -1,0 +1,95 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@types/react-router-redux@4.0.42",
+        "scope": "@types",
+        "escapedName": "@types%2freact-router-redux",
+        "name": "@types/react-router-redux",
+        "rawSpec": "4.0.42",
+        "spec": "4.0.42",
+        "type": "version"
+      },
+      "C:\\Users\\ucadmin\\Documents\\uc\\www"
+    ]
+  ],
+  "_from": "@types/react-router-redux@4.0.42",
+  "_id": "@types/react-router-redux@4.0.42",
+  "_inCache": true,
+  "_location": "/@types/react-router-redux",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/react-router-redux-4.0.42.tgz_1488407663708_0.8991750651039183"
+  },
+  "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+  },
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@types/react-router-redux@4.0.42",
+    "scope": "@types",
+    "escapedName": "@types%2freact-router-redux",
+    "name": "@types/react-router-redux",
+    "rawSpec": "4.0.42",
+    "spec": "4.0.42",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/react-router-redux/-/react-router-redux-4.0.42.tgz",
+  "_shasum": "b6d723fd9d1a2ed2048d606a069440b855b620b5",
+  "_shrinkwrap": null,
+  "_spec": "@types/react-router-redux@4.0.42",
+  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\www",
+  "contributors": [
+    {
+      "name": "Isman Usoh",
+      "url": "http://github.com/isman-usoh"
+    },
+    {
+      "name": "Noah Shipley",
+      "url": "https://github.com/noah79"
+    },
+    {
+      "name": "Dimitri Rosenberg",
+      "url": "https://github.com/rosendi"
+    },
+    {
+      "name": "Karol Janyst",
+      "url": "https://github.com/LKay"
+    }
+  ],
+  "dependencies": {
+    "@types/history": "^3",
+    "redux": "^3.6.0"
+  },
+  "description": "TypeScript definitions for react-router-redux",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "b6d723fd9d1a2ed2048d606a069440b855b620b5",
+    "tarball": "https://registry.npmjs.org/@types/react-router-redux/-/react-router-redux-4.0.42.tgz"
+  },
+  "license": "MIT",
+  "main": "",
+  "maintainers": [
+    {
+      "name": "types",
+      "email": "ryan.cavanaugh@microsoft.com"
+    }
+  ],
+  "name": "@types/react-router-redux",
+  "optionalDependencies": {},
+  "peerDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+  },
+  "scripts": {},
+  "typeScriptVersion": "2.1",
+  "typesPublisherContentHash": "1932d683f56a01c6344efa5da3844b09336798d1681107f629fa5edbec17d368",
+  "version": "4.0.42"
+}

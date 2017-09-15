@@ -1,0 +1,54 @@
+{
+  "_args": [
+    [
+      "@types/webpack@2.2.2",
+      "C:\\Users\\ucadmin\\Documents\\uc\\www"
+    ]
+  ],
+  "_development": true,
+  "_from": "@types/webpack@2.2.2",
+  "_id": "@types/webpack@2.2.2",
+  "_inBundle": false,
+  "_integrity": "sha1-x8PT4uGI9b2izb/xBPpb+n5zGxk=",
+  "_location": "/@types/webpack",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@types/webpack@2.2.2",
+    "name": "@types/webpack",
+    "escapedName": "@types%2fwebpack",
+    "scope": "@types",
+    "rawSpec": "2.2.2",
+    "saveSpec": null,
+    "fetchSpec": "2.2.2"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/webpack/-/webpack-2.2.2.tgz",
+  "_spec": "2.2.2",
+  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\www",
+  "author": {
+    "name": "Qubo",
+    "email": "https://github.com/tkqubo"
+  },
+  "dependencies": {
+    "@types/node": "*",
+    "@types/tapable": "*",
+    "@types/uglify-js": "*"
+  },
+  "description": "TypeScript definitions for webpack",
+  "license": "MIT",
+  "main": "",
+  "name": "@types/webpack",
+  "peerDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+  },
+  "scripts": {},
+  "typeScriptVersion": "2.0",
+  "typesPublisherContentHash": "6316e4df7c19573a75b83ae8b3eec0fac91996424fec85aba130e042f514a67c",
+  "version": "2.2.2"
+}

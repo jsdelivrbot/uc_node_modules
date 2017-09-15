@@ -1,0 +1,27 @@
+{
+    "name": "credit-card-type",
+    "libraryName": "Credit Card Type",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "data": {
+        "authors": "Karol Janyst <https://github.com/LKay>",
+        "dependencies": {},
+        "pathMappings": {},
+        "libraryMajorVersion": 5,
+        "libraryMinorVersion": 0,
+        "typeScriptVersion": "2.0",
+        "libraryName": "Credit Card Type",
+        "typingsPackageName": "credit-card-type",
+        "projectName": "https://github.com/braintree/credit-card-type",
+        "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+        "globals": [],
+        "declaredModules": [
+            "credit-card-type/."
+        ],
+        "files": [
+            "index.d.ts"
+        ],
+        "hasPackageJson": false,
+        "contentHash": "bb580837d0ec419ab342e5b53b2558ac72544163d76593f2c50bcfdf9183c6e6"
+    },
+    "isLatest": true
+}

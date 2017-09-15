@@ -1,0 +1,80 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@types/redux-devtools-log-monitor@1.0.29",
+        "scope": "@types",
+        "escapedName": "@types%2fredux-devtools-log-monitor",
+        "name": "@types/redux-devtools-log-monitor",
+        "rawSpec": "1.0.29",
+        "spec": "1.0.29",
+        "type": "version"
+      },
+      "C:\\Users\\ucadmin\\Documents\\uc\\www"
+    ]
+  ],
+  "_from": "@types/redux-devtools-log-monitor@1.0.29",
+  "_id": "@types/redux-devtools-log-monitor@1.0.29",
+  "_inCache": true,
+  "_location": "/@types/redux-devtools-log-monitor",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/redux-devtools-log-monitor-1.0.29.tgz_1474489705982_0.21804951829835773"
+  },
+  "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+  },
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@types/redux-devtools-log-monitor@1.0.29",
+    "scope": "@types",
+    "escapedName": "@types%2fredux-devtools-log-monitor",
+    "name": "@types/redux-devtools-log-monitor",
+    "rawSpec": "1.0.29",
+    "spec": "1.0.29",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/redux-devtools-log-monitor/-/redux-devtools-log-monitor-1.0.29.tgz",
+  "_shasum": "da02db8476be3ce8f5cec9866c0e7aef325282d7",
+  "_shrinkwrap": null,
+  "_spec": "@types/redux-devtools-log-monitor@1.0.29",
+  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\www",
+  "author": {
+    "name": "Petryshyn Sergii",
+    "email": "https://github.com/mc-petry"
+  },
+  "dependencies": {
+    "@types/base16": "*",
+    "@types/react": "*"
+  },
+  "description": "TypeScript definitions for redux-devtools-log-monitor 1.0.11",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "da02db8476be3ce8f5cec9866c0e7aef325282d7",
+    "tarball": "https://registry.npmjs.org/@types/redux-devtools-log-monitor/-/redux-devtools-log-monitor-1.0.29.tgz"
+  },
+  "license": "MIT",
+  "main": "",
+  "maintainers": [
+    {
+      "name": "types",
+      "email": "ryan.cavanaugh@microsoft.com"
+    }
+  ],
+  "name": "@types/redux-devtools-log-monitor",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+  },
+  "scripts": {},
+  "typesPublisherContentHash": "d056346fcd79a7182da71f87e60c0f5d0d8380516b0adae94ce8ced086978b2d",
+  "typings": "index.d.ts",
+  "version": "1.0.29"
+}

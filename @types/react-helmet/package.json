@@ -1,0 +1,98 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@types/react-helmet@5.0.2",
+        "scope": "@types",
+        "escapedName": "@types%2freact-helmet",
+        "name": "@types/react-helmet",
+        "rawSpec": "5.0.2",
+        "spec": "5.0.2",
+        "type": "version"
+      },
+      "C:\\Users\\ucadmin\\Documents\\uc\\www"
+    ]
+  ],
+  "_from": "@types/react-helmet@5.0.2",
+  "_id": "@types/react-helmet@5.0.2",
+  "_inCache": true,
+  "_location": "/@types/react-helmet",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/react-helmet-5.0.2.tgz_1493402054706_0.20501875667832792"
+  },
+  "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+  },
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@types/react-helmet@5.0.2",
+    "scope": "@types",
+    "escapedName": "@types%2freact-helmet",
+    "name": "@types/react-helmet",
+    "rawSpec": "5.0.2",
+    "spec": "5.0.2",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/react-helmet/-/react-helmet-5.0.2.tgz",
+  "_shasum": "31226b08f2f799b81c6319588f2aed6250367e13",
+  "_shrinkwrap": null,
+  "_spec": "@types/react-helmet@5.0.2",
+  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\www",
+  "contributors": [
+    {
+      "name": "Evan Bremer",
+      "url": "https://github.com/evanbb"
+    },
+    {
+      "name": "Isman Usoh",
+      "url": "https://github.com/isman-usoh"
+    },
+    {
+      "name": "François Nguyen",
+      "url": "https://github.com/lith-light-g"
+    },
+    {
+      "name": "Kok Sam",
+      "url": "https://github.com/sammkj"
+    },
+    {
+      "name": "Yui T.",
+      "url": "https://github.com/yuit"
+    }
+  ],
+  "dependencies": {
+    "@types/react": "*"
+  },
+  "description": "TypeScript definitions for react-helmet",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "31226b08f2f799b81c6319588f2aed6250367e13",
+    "tarball": "https://registry.npmjs.org/@types/react-helmet/-/react-helmet-5.0.2.tgz"
+  },
+  "license": "MIT",
+  "main": "",
+  "maintainers": [
+    {
+      "name": "types",
+      "email": "ts-npm-types@microsoft.com"
+    }
+  ],
+  "name": "@types/react-helmet",
+  "optionalDependencies": {},
+  "peerDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+  },
+  "scripts": {},
+  "typeScriptVersion": "2.1",
+  "typesPublisherContentHash": "00d966820a0123003e52cbd04752907fb232710acf8c4e5053e6a26e9176a495",
+  "version": "5.0.2"
+}

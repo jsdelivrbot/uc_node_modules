@@ -1,0 +1,27 @@
+{
+    "authors": "Petryshyn Sergii <https://github.com/mc-petry>",
+    "definitionFilename": "index.d.ts",
+    "libraryDependencies": [
+        "react"
+    ],
+    "moduleDependencies": [
+        "react"
+    ],
+    "libraryMajorVersion": "1",
+    "libraryMinorVersion": "1",
+    "libraryName": "redux-devtools-dock-monitor 1.1.1",
+    "typingsPackageName": "redux-devtools-dock-monitor",
+    "projectName": "https://github.com/gaearon/redux-devtools-dock-monitor",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "sourceBranch": "types-2.0",
+    "kind": "ProperModule",
+    "globals": [],
+    "declaredModules": [
+        "redux-devtools-dock-monitor"
+    ],
+    "files": [
+        "index.d.ts"
+    ],
+    "hasPackageJson": false,
+    "contentHash": "35cbf06fb126dde7a80fd39a017ae1ea7c650d167dd16d226f189008070a2df7"
+}

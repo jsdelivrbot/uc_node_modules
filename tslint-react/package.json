@@ -1,0 +1,93 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "tslint-react@2.3.0",
+        "scope": null,
+        "escapedName": "tslint-react",
+        "name": "tslint-react",
+        "rawSpec": "2.3.0",
+        "spec": "2.3.0",
+        "type": "version"
+      },
+      "C:\\Users\\ucadmin\\Documents\\uc\\www"
+    ]
+  ],
+  "_from": "tslint-react@2.3.0",
+  "_id": "tslint-react@2.3.0",
+  "_inCache": true,
+  "_location": "/tslint-react",
+  "_nodeVersion": "6.1.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/tslint-react-2.3.0.tgz_1484077426072_0.4140086476691067"
+  },
+  "_npmUser": {
+    "name": "palantir",
+    "email": "pt-vendor-npm@palantir.com"
+  },
+  "_npmVersion": "3.8.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "tslint-react@2.3.0",
+    "scope": null,
+    "escapedName": "tslint-react",
+    "name": "tslint-react",
+    "rawSpec": "2.3.0",
+    "spec": "2.3.0",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/tslint-react/-/tslint-react-2.3.0.tgz",
+  "_shasum": "4d10ea96de278458aac3f9a7f616a442a18634a2",
+  "_shrinkwrap": null,
+  "_spec": "tslint-react@2.3.0",
+  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\www",
+  "bugs": {
+    "url": "https://github.com/palantir/tslint-react/issues"
+  },
+  "dependencies": {},
+  "description": "Lint rules related to React & JSX for TSLint",
+  "devDependencies": {
+    "colors": "^1.1.2",
+    "glob": "^7.0.3",
+    "npm-run-all": "^2.1.2",
+    "path": "^0.12.7",
+    "tslint": "^4.3.1",
+    "typescript": "^2.1.4"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "4d10ea96de278458aac3f9a7f616a442a18634a2",
+    "tarball": "https://registry.npmjs.org/tslint-react/-/tslint-react-2.3.0.tgz"
+  },
+  "homepage": "https://github.com/palantir/tslint-react#readme",
+  "license": "Apache-2.0",
+  "main": "tslint-react.json",
+  "maintainers": [
+    {
+      "name": "palantir",
+      "email": "pt-vendor-npm@palantir.com"
+    }
+  ],
+  "name": "tslint-react",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palantir/tslint-react.git"
+  },
+  "scripts": {
+    "build": "npm-run-all -p compile lint",
+    "clean": "rm -rf build/",
+    "compile": "tsc -p ./",
+    "copy": "cp -f package.json README.md tslint-react.json build/",
+    "lint": "tslint 'src/**/*.ts'",
+    "preversion": "npm-run-all clean test copy",
+    "test": "npm-run-all build test-rules",
+    "test-rules": "scripts/verify.sh"
+  },
+  "version": "2.3.0"
+}

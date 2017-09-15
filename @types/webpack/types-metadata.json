@@ -1,0 +1,31 @@
+{
+    "name": "webpack",
+    "libraryName": "webpack",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "data": {
+        "authors": "Qubo <https://github.com/tkqubo>, Matt Lewis <https://github.com/mattlewis92>, Benjamin Lim <https://github.com/bumbleblym>, Boris Cherny <https://github.com/bcherny>",
+        "dependencies": {
+            "uglify-js": "*",
+            "tapable": "*",
+            "node": "*"
+        },
+        "pathMappings": {},
+        "libraryMajorVersion": 2,
+        "libraryMinorVersion": 2,
+        "typeScriptVersion": "2.0",
+        "libraryName": "webpack",
+        "typingsPackageName": "webpack",
+        "projectName": "https://github.com/webpack/webpack",
+        "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+        "globals": [],
+        "declaredModules": [
+            "webpack/."
+        ],
+        "files": [
+            "index.d.ts"
+        ],
+        "hasPackageJson": false,
+        "contentHash": "6316e4df7c19573a75b83ae8b3eec0fac91996424fec85aba130e042f514a67c"
+    },
+    "isLatest": true
+}

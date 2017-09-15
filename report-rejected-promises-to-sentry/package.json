@@ -1,0 +1,143 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "report-rejected-promises-to-sentry@^1.0.1",
+        "scope": null,
+        "escapedName": "report-rejected-promises-to-sentry",
+        "name": "report-rejected-promises-to-sentry",
+        "rawSpec": "^1.0.1",
+        "spec": ">=1.0.1 <2.0.0",
+        "type": "range"
+      },
+      "C:\\Users\\ucadmin\\Documents\\uc\\www"
+    ]
+  ],
+  "_from": "report-rejected-promises-to-sentry@>=1.0.1 <2.0.0",
+  "_id": "report-rejected-promises-to-sentry@1.0.1",
+  "_inCache": true,
+  "_location": "/report-rejected-promises-to-sentry",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/report-rejected-promises-to-sentry-1.0.1.tgz_1480604633112_0.4400915871374309"
+  },
+  "_npmUser": {
+    "name": "bahmutov",
+    "email": "gleb.bahmutov@gmail.com"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "report-rejected-promises-to-sentry@^1.0.1",
+    "scope": null,
+    "escapedName": "report-rejected-promises-to-sentry",
+    "name": "report-rejected-promises-to-sentry",
+    "rawSpec": "^1.0.1",
+    "spec": ">=1.0.1 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/report-rejected-promises-to-sentry/-/report-rejected-promises-to-sentry-1.0.1.tgz",
+  "_shasum": "447359396d7b68dcbbcb0dddf19182419d3111cc",
+  "_shrinkwrap": null,
+  "_spec": "report-rejected-promises-to-sentry@^1.0.1",
+  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\www",
+  "author": {
+    "name": "Gleb Bahmutov",
+    "email": "gleb.bahmutov@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/bahmutov/report-rejected-promises-to-sentry/issues"
+  },
+  "config": {
+    "pre-git": {
+      "commit-msg": "simple",
+      "pre-commit": [
+        "npm prune",
+        "npm run deps",
+        "npm test",
+        "npm run ban"
+      ],
+      "pre-push": [
+        "npm run secure",
+        "npm run license",
+        "npm run ban -- --all",
+        "npm run size"
+      ],
+      "post-commit": [],
+      "post-merge": []
+    }
+  },
+  "dependencies": {},
+  "description": "Installs global unhandled promise rejection event listener and sends errors to Sentry",
+  "devDependencies": {
+    "ban-sensitive-files": "1.8.3",
+    "dependency-check": "2.6.0",
+    "deps-ok": "1.2.0",
+    "git-issues": "1.2.0",
+    "license-checker": "8.0.0",
+    "mocha": "3.1.0",
+    "nsp": "2.6.1",
+    "pre-git": "3.10.0",
+    "semantic-release": "^6.3.2",
+    "standard": "8.5.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "447359396d7b68dcbbcb0dddf19182419d3111cc",
+    "tarball": "https://registry.npmjs.org/report-rejected-promises-to-sentry/-/report-rejected-promises-to-sentry-1.0.1.tgz"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "src/*.js",
+    "!src/*-spec.js"
+  ],
+  "gitHead": "d7dac426aa70c25cfd683268e31c932c21b540af",
+  "homepage": "https://github.com/bahmutov/report-rejected-promises-to-sentry#readme",
+  "keywords": [
+    "exception",
+    "promise",
+    "raven",
+    "raven.js",
+    "report",
+    "sentry"
+  ],
+  "license": "MIT",
+  "main": "src/",
+  "maintainers": [
+    {
+      "name": "bahmutov",
+      "email": "gleb.bahmutov@gmail.com"
+    }
+  ],
+  "name": "report-rejected-promises-to-sentry",
+  "noScopeName": "report-rejected-promises-to-sentry",
+  "optionalDependencies": {},
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/report-rejected-promises-to-sentry.git"
+  },
+  "scripts": {
+    "ban": "ban",
+    "deps": "deps-ok && dependency-check .",
+    "issues": "git-issues",
+    "license": "license-checker --production --onlyunknown --csv",
+    "lint": "standard --verbose --fix src/*.js",
+    "pretest": "npm run lint",
+    "secure": "nsp check",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
+    "test": "npm run unit",
+    "unit": "mocha src/*-spec.js"
+  },
+  "version": "1.0.1"
+}

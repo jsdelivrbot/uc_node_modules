@@ -1,0 +1,79 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@types/redux-mock-store@0.0.7",
+        "scope": "@types",
+        "escapedName": "@types%2fredux-mock-store",
+        "name": "@types/redux-mock-store",
+        "rawSpec": "0.0.7",
+        "spec": "0.0.7",
+        "type": "version"
+      },
+      "C:\\Users\\ucadmin\\Documents\\uc\\www"
+    ]
+  ],
+  "_from": "@types/redux-mock-store@0.0.7",
+  "_id": "@types/redux-mock-store@0.0.7",
+  "_inCache": true,
+  "_location": "/@types/redux-mock-store",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/redux-mock-store-0.0.7.tgz_1480442659470_0.7454635023605078"
+  },
+  "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+  },
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@types/redux-mock-store@0.0.7",
+    "scope": "@types",
+    "escapedName": "@types%2fredux-mock-store",
+    "name": "@types/redux-mock-store",
+    "rawSpec": "0.0.7",
+    "spec": "0.0.7",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/redux-mock-store/-/redux-mock-store-0.0.7.tgz",
+  "_shasum": "f7b46af371da4b6ef491e57e107d326f0a832201",
+  "_shrinkwrap": null,
+  "_spec": "@types/redux-mock-store@0.0.7",
+  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\www",
+  "author": {
+    "name": "Marian Palkus",
+    "email": "https://github.com/MarianPalkus"
+  },
+  "dependencies": {
+    "redux": "^3.6.0"
+  },
+  "description": "TypeScript definitions for Redux Mock Store",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "f7b46af371da4b6ef491e57e107d326f0a832201",
+    "tarball": "https://registry.npmjs.org/@types/redux-mock-store/-/redux-mock-store-0.0.7.tgz"
+  },
+  "license": "MIT",
+  "main": "",
+  "maintainers": [
+    {
+      "name": "types",
+      "email": "ts-npm-types@microsoft.com"
+    }
+  ],
+  "name": "@types/redux-mock-store",
+  "optionalDependencies": {},
+  "peerDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+  },
+  "scripts": {},
+  "typesPublisherContentHash": "922c95f38dd7a3729f798a01d909221e4694b40314d514e3ef014a5cbf3f3381",
+  "version": "0.0.7"
+}

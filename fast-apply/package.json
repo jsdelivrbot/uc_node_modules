@@ -1,0 +1,85 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "fast-apply@*",
+        "scope": null,
+        "escapedName": "fast-apply",
+        "name": "fast-apply",
+        "rawSpec": "*",
+        "spec": "*",
+        "type": "range"
+      },
+      "C:\\Users\\ucadmin\\Documents\\uc\\www\\node_modules\\deepequal"
+    ]
+  ],
+  "_from": "fast-apply@*",
+  "_id": "fast-apply@0.0.3",
+  "_inCache": true,
+  "_location": "/fast-apply",
+  "_npmUser": {
+    "name": "jaycetde",
+    "email": "jaycemp@gmail.com"
+  },
+  "_npmVersion": "1.2.18",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "fast-apply@*",
+    "scope": null,
+    "escapedName": "fast-apply",
+    "name": "fast-apply",
+    "rawSpec": "*",
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/deepequal"
+  ],
+  "_resolved": "https://registry.npmjs.org/fast-apply/-/fast-apply-0.0.3.tgz",
+  "_shasum": "7791bb3f7f76b7064c0b73bc3e75bfad8553c861",
+  "_shrinkwrap": null,
+  "_spec": "fast-apply@*",
+  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\www\\node_modules\\deepequal",
+  "author": {
+    "name": "Jayce Pulsipher",
+    "email": "jaycemp@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/JayceTDE/fast-apply/issues"
+  },
+  "dependencies": {},
+  "description": "Apply an array of arguments... faster",
+  "devDependencies": {
+    "benchmark": "*"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "7791bb3f7f76b7064c0b73bc3e75bfad8553c861",
+    "tarball": "https://registry.npmjs.org/fast-apply/-/fast-apply-0.0.3.tgz"
+  },
+  "homepage": "https://github.com/JayceTDE/fast-apply#readme",
+  "keywords": [
+    "apply",
+    "fast",
+    "faster"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "jaycetde",
+      "email": "jaycemp@gmail.com"
+    }
+  ],
+  "name": "fast-apply",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JayceTDE/fast-apply.git"
+  },
+  "scripts": {
+    "test": "node ./benchmark/fastApply.js"
+  },
+  "version": "0.0.3"
+}

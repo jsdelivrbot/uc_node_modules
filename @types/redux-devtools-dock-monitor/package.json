@@ -1,0 +1,79 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@types/redux-devtools-dock-monitor@1.1.29",
+        "scope": "@types",
+        "escapedName": "@types%2fredux-devtools-dock-monitor",
+        "name": "@types/redux-devtools-dock-monitor",
+        "rawSpec": "1.1.29",
+        "spec": "1.1.29",
+        "type": "version"
+      },
+      "C:\\Users\\ucadmin\\Documents\\uc\\www"
+    ]
+  ],
+  "_from": "@types/redux-devtools-dock-monitor@1.1.29",
+  "_id": "@types/redux-devtools-dock-monitor@1.1.29",
+  "_inCache": true,
+  "_location": "/@types/redux-devtools-dock-monitor",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/redux-devtools-dock-monitor-1.1.29.tgz_1474489703734_0.26334404828958213"
+  },
+  "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+  },
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@types/redux-devtools-dock-monitor@1.1.29",
+    "scope": "@types",
+    "escapedName": "@types%2fredux-devtools-dock-monitor",
+    "name": "@types/redux-devtools-dock-monitor",
+    "rawSpec": "1.1.29",
+    "spec": "1.1.29",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/redux-devtools-dock-monitor/-/redux-devtools-dock-monitor-1.1.29.tgz",
+  "_shasum": "7b14e3c5a9d5553199ba2ee51447ef57208bd0b9",
+  "_shrinkwrap": null,
+  "_spec": "@types/redux-devtools-dock-monitor@1.1.29",
+  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\www",
+  "author": {
+    "name": "Petryshyn Sergii",
+    "email": "https://github.com/mc-petry"
+  },
+  "dependencies": {
+    "@types/react": "*"
+  },
+  "description": "TypeScript definitions for redux-devtools-dock-monitor 1.1.1",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "7b14e3c5a9d5553199ba2ee51447ef57208bd0b9",
+    "tarball": "https://registry.npmjs.org/@types/redux-devtools-dock-monitor/-/redux-devtools-dock-monitor-1.1.29.tgz"
+  },
+  "license": "MIT",
+  "main": "",
+  "maintainers": [
+    {
+      "name": "types",
+      "email": "ryan.cavanaugh@microsoft.com"
+    }
+  ],
+  "name": "@types/redux-devtools-dock-monitor",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+  },
+  "scripts": {},
+  "typesPublisherContentHash": "35cbf06fb126dde7a80fd39a017ae1ea7c650d167dd16d226f189008070a2df7",
+  "typings": "index.d.ts",
+  "version": "1.1.29"
+}

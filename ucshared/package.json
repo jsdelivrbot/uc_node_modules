@@ -1,0 +1,66 @@
+{
+  "_from": "ucshared@1.37.0",
+  "_id": "ucshared@1.37.0",
+  "_inBundle": false,
+  "_integrity": "sha512-ulNsXJqykER0vLiOGj9T0S2kOVO00z5JZwZAdwFQZIsT7QUDamN7l8nI+SH7wOZJ6n6iBTdy6QEMopQlGOLeow==",
+  "_location": "/ucshared",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "ucshared@1.37.0",
+    "name": "ucshared",
+    "escapedName": "ucshared",
+    "rawSpec": "1.37.0",
+    "saveSpec": null,
+    "fetchSpec": "1.37.0"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ucshared/-/ucshared-1.37.0.tgz",
+  "_shasum": "c98d5dcdd3fa626d915f6ccb5aea517cef7ee3b6",
+  "_spec": "ucshared@1.37.0",
+  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\www",
+  "author": {
+    "name": "Ben Herila",
+    "email": "ben@undergroundcellar.com"
+  },
+  "bugs": {
+    "url": "https://www.undergroundcellar.com"
+  },
+  "bundleDependencies": false,
+  "contributors": [],
+  "dependencies": {
+    "@types/credit-card-type": "^5.0.1",
+    "@types/node": "^8.0.1",
+    "@types/underscore": "^1.8.1",
+    "credit-card-type": "^5.0.3",
+    "portable-fetch": "^3.0.0",
+    "querystring": "^0.2.0",
+    "underscore": "^1.8.3",
+    "url": "^0.11.0"
+  },
+  "deprecated": false,
+  "description": "Shared libs for ucellar",
+  "devDependencies": {},
+  "files": [
+    "lib",
+    "src",
+    "tsconfig.json"
+  ],
+  "homepage": "https://www.undergroundcellar.com",
+  "keywords": [
+    "ucellar"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "ucshared",
+  "repository": {
+    "type": "git",
+    "url": "https://ucellar.visualstudio.com/UC/_git/uc_web/"
+  },
+  "types": "lib/index.d.ts",
+  "version": "1.37.0"
+}

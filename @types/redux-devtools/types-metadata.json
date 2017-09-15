@@ -1,0 +1,27 @@
+{
+    "authors": "Petryshyn Sergii <https://github.com/mc-petry>",
+    "libraryDependencies": [],
+    "moduleDependencies": [
+        "react",
+        "redux"
+    ],
+    "libraryMajorVersion": 3,
+    "libraryMinorVersion": 0,
+    "libraryName": "redux-devtools",
+    "typingsPackageName": "redux-devtools",
+    "projectName": "https://github.com/gaearon/redux-devtools",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "sourceBranch": "types-2.0",
+    "kind": "ProperModule",
+    "globals": [
+        "factory"
+    ],
+    "declaredModules": [
+        "redux-devtools"
+    ],
+    "files": [
+        "index.d.ts"
+    ],
+    "hasPackageJson": true,
+    "contentHash": "ec53696a341bf5696a0a5523c7ca05fb1f1f3fdde09e1fda8d568ffc74b38ca1"
+}
