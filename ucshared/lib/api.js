@@ -4704,6 +4704,7 @@ exports.KeyMetricsApiFetchParamCreator = {
     /**
      * @param startMonth
      * @param startYear
+     * @param minLifeSpend
      */
     keyMetricsGetCohortsByFirstOrder: function (params, options) {
         // verify required parameter "startMonth" is set
@@ -4714,11 +4715,16 @@ exports.KeyMetricsApiFetchParamCreator = {
         if (params["startYear"] == null) {
             throw new Error("Missing required parameter startYear when calling keyMetricsGetCohortsByFirstOrder");
         }
+        // verify required parameter "minLifeSpend" is set
+        if (params["minLifeSpend"] == null) {
+            throw new Error("Missing required parameter minLifeSpend when calling keyMetricsGetCohortsByFirstOrder");
+        }
         var baseUrl = "/api/admin/cohorts/byFirstOrder";
         var urlObj = url.parse(baseUrl, true);
         urlObj.query = assign({}, urlObj.query, {
             "startMonth": params["startMonth"],
             "startYear": params["startYear"],
+            "minLifeSpend": params["minLifeSpend"],
         });
         var fetchOptions = assign({}, { method: "GET" }, options);
         var contentTypeHeader = {};
@@ -4899,6 +4905,7 @@ exports.KeyMetricsApiFp = {
     /**
      * @param startMonth
      * @param startYear
+     * @param minLifeSpend
      */
     keyMetricsGetCohortsByFirstOrder: function (params, options) {
         var fetchArgs = exports.KeyMetricsApiFetchParamCreator.keyMetricsGetCohortsByFirstOrder(params, options);
@@ -5003,6 +5010,7 @@ var KeyMetricsApi = (function (_super) {
     /**
      * @param startMonth
      * @param startYear
+     * @param minLifeSpend
      */
     KeyMetricsApi.prototype.keyMetricsGetCohortsByFirstOrder = function (params, options) {
         return exports.KeyMetricsApiFp.keyMetricsGetCohortsByFirstOrder(params, options)(this.fetch, this.basePath);
@@ -5071,6 +5079,7 @@ exports.KeyMetricsApiFactory = function (fetch, basePath) {
         /**
          * @param startMonth
          * @param startYear
+         * @param minLifeSpend
          */
         keyMetricsGetCohortsByFirstOrder: function (params, options) {
             return exports.KeyMetricsApiFp.keyMetricsGetCohortsByFirstOrder(params, options)(fetch, basePath);
@@ -13627,6 +13636,27 @@ exports.WineGeniusApiFetchParamCreator = {
     },
     /**
      * @param sessionId
+     */
+    wineGeniusHandleGetMessages: function (params, options) {
+        // verify required parameter "sessionId" is set
+        if (params["sessionId"] == null) {
+            throw new Error("Missing required parameter sessionId when calling wineGeniusHandleGetMessages");
+        }
+        var baseUrl = "/api/session/{sessionId}/winegenius/message"
+            .replace("{" + "sessionId" + "}", "" + params["sessionId"]);
+        var urlObj = url.parse(baseUrl, true);
+        var fetchOptions = assign({}, { method: "GET" }, options);
+        var contentTypeHeader = {};
+        if (contentTypeHeader) {
+            fetchOptions.headers = contentTypeHeader;
+        }
+        return {
+            url: url.format(urlObj),
+            options: fetchOptions,
+        };
+    },
+    /**
+     * @param sessionId
      * @param vacationDateSet
      * @param vacationSuspendOn
      * @param vacationResumeOn
@@ -13648,6 +13678,36 @@ exports.WineGeniusApiFetchParamCreator = {
         });
         var fetchOptions = assign({}, { method: "GET" }, options);
         var contentTypeHeader = {};
+        if (contentTypeHeader) {
+            fetchOptions.headers = contentTypeHeader;
+        }
+        return {
+            url: url.format(urlObj),
+            options: fetchOptions,
+        };
+    },
+    /**
+     * @param sessionId
+     * @param message
+     */
+    wineGeniusHandlePostMessage: function (params, options) {
+        // verify required parameter "sessionId" is set
+        if (params["sessionId"] == null) {
+            throw new Error("Missing required parameter sessionId when calling wineGeniusHandlePostMessage");
+        }
+        // verify required parameter "message" is set
+        if (params["message"] == null) {
+            throw new Error("Missing required parameter message when calling wineGeniusHandlePostMessage");
+        }
+        var baseUrl = "/api/session/{sessionId}/winegenius/message"
+            .replace("{" + "sessionId" + "}", "" + params["sessionId"]);
+        var urlObj = url.parse(baseUrl, true);
+        var fetchOptions = assign({}, { method: "POST" }, options);
+        var contentTypeHeader = {};
+        contentTypeHeader = { "Content-Type": "application/json" };
+        if (params["message"]) {
+            fetchOptions.body = JSON.stringify(params["message"] || {});
+        }
         if (contentTypeHeader) {
             fetchOptions.headers = contentTypeHeader;
         }
@@ -13907,6 +13967,24 @@ exports.WineGeniusApiFp = {
     },
     /**
      * @param sessionId
+     */
+    wineGeniusHandleGetMessages: function (params, options) {
+        var fetchArgs = exports.WineGeniusApiFetchParamCreator.wineGeniusHandleGetMessages(params, options);
+        return function (fetch, basePath) {
+            if (fetch === void 0) { fetch = isomorphicFetch; }
+            if (basePath === void 0) { basePath = exports.BASE_PATH; }
+            return fetch(basePath + fetchArgs.url, fetchArgs.options).then(function (response) {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                }
+                else {
+                    throw response;
+                }
+            });
+        };
+    },
+    /**
+     * @param sessionId
      * @param vacationDateSet
      * @param vacationSuspendOn
      * @param vacationResumeOn
@@ -13914,6 +13992,25 @@ exports.WineGeniusApiFp = {
      */
     wineGeniusHandleGetVacation: function (params, options) {
         var fetchArgs = exports.WineGeniusApiFetchParamCreator.wineGeniusHandleGetVacation(params, options);
+        return function (fetch, basePath) {
+            if (fetch === void 0) { fetch = isomorphicFetch; }
+            if (basePath === void 0) { basePath = exports.BASE_PATH; }
+            return fetch(basePath + fetchArgs.url, fetchArgs.options).then(function (response) {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                }
+                else {
+                    throw response;
+                }
+            });
+        };
+    },
+    /**
+     * @param sessionId
+     * @param message
+     */
+    wineGeniusHandlePostMessage: function (params, options) {
+        var fetchArgs = exports.WineGeniusApiFetchParamCreator.wineGeniusHandlePostMessage(params, options);
         return function (fetch, basePath) {
             if (fetch === void 0) { fetch = isomorphicFetch; }
             if (basePath === void 0) { basePath = exports.BASE_PATH; }
@@ -14079,6 +14176,12 @@ var WineGeniusApi = (function (_super) {
     };
     /**
      * @param sessionId
+     */
+    WineGeniusApi.prototype.wineGeniusHandleGetMessages = function (params, options) {
+        return exports.WineGeniusApiFp.wineGeniusHandleGetMessages(params, options)(this.fetch, this.basePath);
+    };
+    /**
+     * @param sessionId
      * @param vacationDateSet
      * @param vacationSuspendOn
      * @param vacationResumeOn
@@ -14086,6 +14189,13 @@ var WineGeniusApi = (function (_super) {
      */
     WineGeniusApi.prototype.wineGeniusHandleGetVacation = function (params, options) {
         return exports.WineGeniusApiFp.wineGeniusHandleGetVacation(params, options)(this.fetch, this.basePath);
+    };
+    /**
+     * @param sessionId
+     * @param message
+     */
+    WineGeniusApi.prototype.wineGeniusHandlePostMessage = function (params, options) {
+        return exports.WineGeniusApiFp.wineGeniusHandlePostMessage(params, options)(this.fetch, this.basePath);
     };
     /**
      * @param sessionId
@@ -14167,6 +14277,12 @@ exports.WineGeniusApiFactory = function (fetch, basePath) {
         },
         /**
          * @param sessionId
+         */
+        wineGeniusHandleGetMessages: function (params, options) {
+            return exports.WineGeniusApiFp.wineGeniusHandleGetMessages(params, options)(fetch, basePath);
+        },
+        /**
+         * @param sessionId
          * @param vacationDateSet
          * @param vacationSuspendOn
          * @param vacationResumeOn
@@ -14174,6 +14290,13 @@ exports.WineGeniusApiFactory = function (fetch, basePath) {
          */
         wineGeniusHandleGetVacation: function (params, options) {
             return exports.WineGeniusApiFp.wineGeniusHandleGetVacation(params, options)(fetch, basePath);
+        },
+        /**
+         * @param sessionId
+         * @param message
+         */
+        wineGeniusHandlePostMessage: function (params, options) {
+            return exports.WineGeniusApiFp.wineGeniusHandlePostMessage(params, options)(fetch, basePath);
         },
         /**
          * @param sessionId

@@ -241,6 +241,11 @@ export interface ApiResultWineGeniusData {
     "success"?: boolean;
     "message"?: string;
 }
+export interface ApiResultWineGeniusMessage {
+    "value"?: WineGeniusMessage;
+    "success"?: boolean;
+    "message"?: string;
+}
 export interface ApiResultWineGeniusVacation {
     "value"?: WineGeniusVacation;
     "success"?: boolean;
@@ -350,6 +355,7 @@ export interface CloudCellarV2 {
 export interface CloudCheckoutItem {
     "sku"?: string;
     "qty"?: number;
+    "cloudItemDetail"?: PgCloudCellarRecord;
 }
 export interface CloudCheckoutModel {
     "shippingMethod"?: CloudCheckoutModelShippingMethodEnum;
@@ -1416,12 +1422,22 @@ export interface TaxInfo {
     "orderTaxAmt"?: number;
 }
 export interface TimeSeriesCohort {
-    "label"?: string;
-    "data"?: Array<Cohort>;
+    "data"?: {
+        [key: string]: Cohort;
+    };
     "totalPq"?: number;
     "totalOrder"?: number;
     "totalQty"?: number;
     "timeToFirstPurchase"?: number;
+}
+export interface TimeSeriesCohortSummary {
+    "cohorts"?: {
+        [key: string]: TimeSeriesCohort;
+    };
+    "avgPq"?: number;
+    "avgOrder"?: number;
+    "avgQty"?: number;
+    "sumByKey"?: TimeSeriesCohort;
 }
 export interface TimeSeriesReport {
     "entityGuid"?: string;
@@ -1741,6 +1757,12 @@ export interface WineGeniusData {
 export interface WineGeniusExclusionItem {
     "userGuid"?: string;
     "email"?: string;
+}
+export interface WineGeniusMessage {
+    "userGuid"?: string;
+    "from"?: string;
+    "message"?: string;
+    "messageDate"?: Date;
 }
 export interface WineGeniusVacation {
     "dateSet"?: Date;
@@ -3363,6 +3385,7 @@ export declare const KeyMetricsApiFetchParamCreator: {
     keyMetricsGetCohortsByFirstOrder(params: {
         "startMonth": number;
         "startYear": number;
+        "minLifeSpend": number;
     }, options?: any): FetchArgs;
     keyMetricsGetLtvReport(params: {
         "utmCampaign"?: string;
@@ -3397,7 +3420,8 @@ export declare const KeyMetricsApiFp: {
     keyMetricsGetCohortsByFirstOrder(params: {
         "startMonth": number;
         "startYear": number;
-    }, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TimeSeriesCohort[]>;
+        "minLifeSpend": number;
+    }, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TimeSeriesCohortSummary>;
     keyMetricsGetLtvReport(params: {
         "utmCampaign"?: string;
         "utmSource"?: string;
@@ -3450,11 +3474,13 @@ export declare class KeyMetricsApi extends BaseAPI {
     /**
      * @param startMonth
      * @param startYear
+     * @param minLifeSpend
      */
     keyMetricsGetCohortsByFirstOrder(params: {
         "startMonth": number;
         "startYear": number;
-    }, options?: any): Promise<TimeSeriesCohort[]>;
+        "minLifeSpend": number;
+    }, options?: any): Promise<TimeSeriesCohortSummary>;
     /**
      * @param utmCampaign
      * @param utmSource
@@ -3497,7 +3523,8 @@ export declare const KeyMetricsApiFactory: (fetch?: FetchAPI, basePath?: string)
     keyMetricsGetCohortsByFirstOrder(params: {
         "startMonth": number;
         "startYear": number;
-    }, options?: any): Promise<TimeSeriesCohort[]>;
+        "minLifeSpend": number;
+    }, options?: any): Promise<TimeSeriesCohortSummary>;
     keyMetricsGetLtvReport(params: {
         "utmCampaign"?: string;
         "utmSource"?: string;
@@ -6267,12 +6294,19 @@ export declare const WineGeniusApiFetchParamCreator: {
     wineGeniusGetWineGeniusUsersForOffer(params: {
         "offerSef": string;
     }, options?: any): FetchArgs;
+    wineGeniusHandleGetMessages(params: {
+        "sessionId": string;
+    }, options?: any): FetchArgs;
     wineGeniusHandleGetVacation(params: {
         "sessionId": string;
         "vacationDateSet"?: Date;
         "vacationSuspendOn"?: Date;
         "vacationResumeOn"?: Date;
         "vacationVacationGuid"?: string;
+    }, options?: any): FetchArgs;
+    wineGeniusHandlePostMessage(params: {
+        "sessionId": string;
+        "message": WineGeniusMessage;
     }, options?: any): FetchArgs;
     wineGeniusHandlePostVacation(params: {
         "sessionId": string;
@@ -6316,6 +6350,9 @@ export declare const WineGeniusApiFp: {
     wineGeniusGetWineGeniusUsersForOffer(params: {
         "offerSef": string;
     }, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiResultListGeniusGuess>;
+    wineGeniusHandleGetMessages(params: {
+        "sessionId": string;
+    }, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiResultWineGeniusMessage>;
     wineGeniusHandleGetVacation(params: {
         "sessionId": string;
         "vacationDateSet"?: Date;
@@ -6323,6 +6360,10 @@ export declare const WineGeniusApiFp: {
         "vacationResumeOn"?: Date;
         "vacationVacationGuid"?: string;
     }, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiResultWineGeniusVacation>;
+    wineGeniusHandlePostMessage(params: {
+        "sessionId": string;
+        "message": WineGeniusMessage;
+    }, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiResultWineGeniusMessage>;
     wineGeniusHandlePostVacation(params: {
         "sessionId": string;
         "vacation": WineGeniusVacation;
@@ -6382,6 +6423,12 @@ export declare class WineGeniusApi extends BaseAPI {
     }, options?: any): Promise<ApiResultListGeniusGuess>;
     /**
      * @param sessionId
+     */
+    wineGeniusHandleGetMessages(params: {
+        "sessionId": string;
+    }, options?: any): Promise<ApiResultWineGeniusMessage>;
+    /**
+     * @param sessionId
      * @param vacationDateSet
      * @param vacationSuspendOn
      * @param vacationResumeOn
@@ -6394,6 +6441,14 @@ export declare class WineGeniusApi extends BaseAPI {
         "vacationResumeOn"?: Date;
         "vacationVacationGuid"?: string;
     }, options?: any): Promise<ApiResultWineGeniusVacation>;
+    /**
+     * @param sessionId
+     * @param message
+     */
+    wineGeniusHandlePostMessage(params: {
+        "sessionId": string;
+        "message": WineGeniusMessage;
+    }, options?: any): Promise<ApiResultWineGeniusMessage>;
     /**
      * @param sessionId
      * @param vacation
@@ -6460,6 +6515,9 @@ export declare const WineGeniusApiFactory: (fetch?: FetchAPI, basePath?: string)
     wineGeniusGetWineGeniusUsersForOffer(params: {
         "offerSef": string;
     }, options?: any): Promise<ApiResultListGeniusGuess>;
+    wineGeniusHandleGetMessages(params: {
+        "sessionId": string;
+    }, options?: any): Promise<ApiResultWineGeniusMessage>;
     wineGeniusHandleGetVacation(params: {
         "sessionId": string;
         "vacationDateSet"?: Date;
@@ -6467,6 +6525,10 @@ export declare const WineGeniusApiFactory: (fetch?: FetchAPI, basePath?: string)
         "vacationResumeOn"?: Date;
         "vacationVacationGuid"?: string;
     }, options?: any): Promise<ApiResultWineGeniusVacation>;
+    wineGeniusHandlePostMessage(params: {
+        "sessionId": string;
+        "message": WineGeniusMessage;
+    }, options?: any): Promise<ApiResultWineGeniusMessage>;
     wineGeniusHandlePostVacation(params: {
         "sessionId": string;
         "vacation": WineGeniusVacation;

@@ -1,28 +1,28 @@
 {
-  "_from": "ucshared@1.40.0",
-  "_id": "ucshared@1.40.0",
+  "_from": "ucshared@1.43.0",
+  "_id": "ucshared@1.43.0",
   "_inBundle": false,
-  "_integrity": "sha512-okDepp43H0GhP4J4njGF4mXSwC/QafCYZwoUX+AZr+V/RWRTxlo6iOFC/EXKc+lFKD6sChRy5BWT79GjmatTmQ==",
+  "_integrity": "sha512-9AHd8vpX6Voh1lR9wzJDTuEjhicA1TWmk01CdVIY0hF0ACjoJamjJc8xzGLoSLd2E7iziHJv5NevNldklfyvlw==",
   "_location": "/ucshared",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "ucshared@1.40.0",
+    "raw": "ucshared@1.43.0",
     "name": "ucshared",
     "escapedName": "ucshared",
-    "rawSpec": "1.40.0",
+    "rawSpec": "1.43.0",
     "saveSpec": null,
-    "fetchSpec": "1.40.0"
+    "fetchSpec": "1.43.0"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/ucshared/-/ucshared-1.40.0.tgz",
-  "_shasum": "46fe3005ce5d1d35e8ad038b6f4a1cd85c9e4c6e",
-  "_spec": "ucshared@1.40.0",
-  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\www",
+  "_resolved": "https://registry.npmjs.org/ucshared/-/ucshared-1.43.0.tgz",
+  "_shasum": "2058b703b5a67ba76f7523cb6b5945bde83124d7",
+  "_spec": "ucshared@1.43.0",
+  "_where": "C:\\Users\\ucadmin\\Documents\\uc\\admin",
   "author": {
     "name": "Ben Herila",
     "email": "ben@undergroundcellar.com"
@@ -37,6 +37,7 @@
     "@types/node": "^8.0.1",
     "@types/underscore": "^1.8.1",
     "credit-card-type": "^5.0.3",
+    "moment": "^2.18.1",
     "portable-fetch": "^3.0.0",
     "querystring": "^0.2.0",
     "underscore": "^1.8.3",
@@ -62,5 +63,5 @@
     "url": "https://ucellar.visualstudio.com/UC/_git/uc_web/"
   },
   "types": "lib/index.d.ts",
-  "version": "1.40.0"
+  "version": "1.43.0"
 }

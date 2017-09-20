@@ -4,6 +4,7 @@ export * from './defaults';
 export * from './error';
 export * from './states';
 export * from './validation';
+export * from './util';
 
 export const URL_BASE = 'https://www.undergroundcellar.com/'; // TODO: Change this?
 export const WINE_IMG_URL_BASE = URL_BASE + 'wine-img/'; // TODO: Change this?

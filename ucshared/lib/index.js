@@ -9,6 +9,7 @@ __export(require("./defaults"));
 __export(require("./error"));
 __export(require("./states"));
 __export(require("./validation"));
+__export(require("./util"));
 exports.URL_BASE = 'https://www.undergroundcellar.com/'; // TODO: Change this?
 exports.WINE_IMG_URL_BASE = exports.URL_BASE + 'wine-img/'; // TODO: Change this?
 exports.DETAIL_BASE_URL = '/wine-deals/';

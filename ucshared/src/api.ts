@@ -299,6 +299,12 @@ export interface ApiResultWineGeniusData {
     "message"?: string;
 }
 
+export interface ApiResultWineGeniusMessage {
+    "value"?: WineGeniusMessage;
+    "success"?: boolean;
+    "message"?: string;
+}
+
 export interface ApiResultWineGeniusVacation {
     "value"?: WineGeniusVacation;
     "success"?: boolean;
@@ -421,6 +427,7 @@ export interface CloudCellarV2 {
 export interface CloudCheckoutItem {
     "sku"?: string;
     "qty"?: number;
+    "cloudItemDetail"?: PgCloudCellarRecord;
 }
 
 export interface CloudCheckoutModel {
@@ -1562,8 +1569,7 @@ export interface TaxInfo {
 }
 
 export interface TimeSeriesCohort {
-    "label"?: string;
-    "data"?: Array<Cohort>;
+    "data"?: { [key: string]: Cohort; };
     "totalPq"?: number;
     "totalOrder"?: number;
     "totalQty"?: number;
@@ -1571,10 +1577,11 @@ export interface TimeSeriesCohort {
 }
 
 export interface TimeSeriesCohortSummary {
-    "cohorts"?: Array<TimeSeriesCohort>;
+    "cohorts"?: { [key: string]: TimeSeriesCohort; };
     "avgPq"?: number;
     "avgOrder"?: number;
     "avgQty"?: number;
+    "sumByKey"?: TimeSeriesCohort;
 }
 
 export interface TimeSeriesReport {
@@ -1914,6 +1921,13 @@ export interface WineGeniusData {
 export interface WineGeniusExclusionItem {
     "userGuid"?: string;
     "email"?: string;
+}
+
+export interface WineGeniusMessage {
+    "userGuid"?: string;
+    "from"?: string;
+    "message"?: string;
+    "messageDate"?: Date;
 }
 
 export interface WineGeniusVacation {
@@ -6642,7 +6656,7 @@ export const KeyMetricsApiFp = {
      * @param startYear 
      * @param minLifeSpend 
      */
-    keyMetricsGetCohortsByFirstOrder(params: { "startMonth": number; "startYear": number; "minLifeSpend": number;  }, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Array<TimeSeriesCohortSummary>> {
+    keyMetricsGetCohortsByFirstOrder(params: { "startMonth": number; "startYear": number; "minLifeSpend": number;  }, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TimeSeriesCohortSummary> {
         const fetchArgs = KeyMetricsApiFetchParamCreator.keyMetricsGetCohortsByFirstOrder(params, options);
         return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
             return fetch(basePath + fetchArgs.url, fetchArgs.options).then((response) => {
@@ -15041,6 +15055,28 @@ export const WineGeniusApiFetchParamCreator = {
     },
     /** 
      * @param sessionId 
+     */
+    wineGeniusHandleGetMessages(params: {  "sessionId": string; }, options?: any): FetchArgs {
+        // verify required parameter "sessionId" is set
+        if (params["sessionId"] == null) {
+            throw new Error("Missing required parameter sessionId when calling wineGeniusHandleGetMessages");
+        }
+        const baseUrl = `/api/session/{sessionId}/winegenius/message`
+            .replace(`{${"sessionId"}}`, `${ params["sessionId"] }`);
+        let urlObj = url.parse(baseUrl, true);
+        let fetchOptions: RequestInit = assign({}, { method: "GET" }, options);
+
+        let contentTypeHeader: Dictionary<string> = {};
+        if (contentTypeHeader) {
+            fetchOptions.headers = contentTypeHeader;
+        }
+        return {
+            url: url.format(urlObj),
+            options: fetchOptions,
+        };
+    },
+    /** 
+     * @param sessionId 
      * @param vacationDateSet 
      * @param vacationSuspendOn 
      * @param vacationResumeOn 
@@ -15063,6 +15099,37 @@ export const WineGeniusApiFetchParamCreator = {
         let fetchOptions: RequestInit = assign({}, { method: "GET" }, options);
 
         let contentTypeHeader: Dictionary<string> = {};
+        if (contentTypeHeader) {
+            fetchOptions.headers = contentTypeHeader;
+        }
+        return {
+            url: url.format(urlObj),
+            options: fetchOptions,
+        };
+    },
+    /** 
+     * @param sessionId 
+     * @param message 
+     */
+    wineGeniusHandlePostMessage(params: {  "sessionId": string; "message": WineGeniusMessage; }, options?: any): FetchArgs {
+        // verify required parameter "sessionId" is set
+        if (params["sessionId"] == null) {
+            throw new Error("Missing required parameter sessionId when calling wineGeniusHandlePostMessage");
+        }
+        // verify required parameter "message" is set
+        if (params["message"] == null) {
+            throw new Error("Missing required parameter message when calling wineGeniusHandlePostMessage");
+        }
+        const baseUrl = `/api/session/{sessionId}/winegenius/message`
+            .replace(`{${"sessionId"}}`, `${ params["sessionId"] }`);
+        let urlObj = url.parse(baseUrl, true);
+        let fetchOptions: RequestInit = assign({}, { method: "POST" }, options);
+
+        let contentTypeHeader: Dictionary<string> = {};
+        contentTypeHeader = { "Content-Type": "application/json" };
+        if (params["message"]) {
+            fetchOptions.body = JSON.stringify(params["message"] || {});
+        }
         if (contentTypeHeader) {
             fetchOptions.headers = contentTypeHeader;
         }
@@ -15317,6 +15384,21 @@ export const WineGeniusApiFp = {
     },
     /** 
      * @param sessionId 
+     */
+    wineGeniusHandleGetMessages(params: { "sessionId": string;  }, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiResultWineGeniusMessage> {
+        const fetchArgs = WineGeniusApiFetchParamCreator.wineGeniusHandleGetMessages(params, options);
+        return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+            return fetch(basePath + fetchArgs.url, fetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        };
+    },
+    /** 
+     * @param sessionId 
      * @param vacationDateSet 
      * @param vacationSuspendOn 
      * @param vacationResumeOn 
@@ -15324,6 +15406,22 @@ export const WineGeniusApiFp = {
      */
     wineGeniusHandleGetVacation(params: { "sessionId": string; "vacationDateSet"?: Date; "vacationSuspendOn"?: Date; "vacationResumeOn"?: Date; "vacationVacationGuid"?: string;  }, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiResultWineGeniusVacation> {
         const fetchArgs = WineGeniusApiFetchParamCreator.wineGeniusHandleGetVacation(params, options);
+        return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+            return fetch(basePath + fetchArgs.url, fetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        };
+    },
+    /** 
+     * @param sessionId 
+     * @param message 
+     */
+    wineGeniusHandlePostMessage(params: { "sessionId": string; "message": WineGeniusMessage;  }, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiResultWineGeniusMessage> {
+        const fetchArgs = WineGeniusApiFetchParamCreator.wineGeniusHandlePostMessage(params, options);
         return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
             return fetch(basePath + fetchArgs.url, fetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -15465,6 +15563,12 @@ export class WineGeniusApi extends BaseAPI {
     }
     /** 
      * @param sessionId 
+     */
+    wineGeniusHandleGetMessages(params: {  "sessionId": string; }, options?: any) {
+        return WineGeniusApiFp.wineGeniusHandleGetMessages(params, options)(this.fetch, this.basePath);
+    }
+    /** 
+     * @param sessionId 
      * @param vacationDateSet 
      * @param vacationSuspendOn 
      * @param vacationResumeOn 
@@ -15472,6 +15576,13 @@ export class WineGeniusApi extends BaseAPI {
      */
     wineGeniusHandleGetVacation(params: {  "sessionId": string; "vacationDateSet"?: Date; "vacationSuspendOn"?: Date; "vacationResumeOn"?: Date; "vacationVacationGuid"?: string; }, options?: any) {
         return WineGeniusApiFp.wineGeniusHandleGetVacation(params, options)(this.fetch, this.basePath);
+    }
+    /** 
+     * @param sessionId 
+     * @param message 
+     */
+    wineGeniusHandlePostMessage(params: {  "sessionId": string; "message": WineGeniusMessage; }, options?: any) {
+        return WineGeniusApiFp.wineGeniusHandlePostMessage(params, options)(this.fetch, this.basePath);
     }
     /** 
      * @param sessionId 
@@ -15551,6 +15662,12 @@ export const WineGeniusApiFactory = function (fetch?: FetchAPI, basePath?: strin
         },
         /** 
          * @param sessionId 
+         */
+        wineGeniusHandleGetMessages(params: {  "sessionId": string; }, options?: any) {
+            return WineGeniusApiFp.wineGeniusHandleGetMessages(params, options)(fetch, basePath);
+        },
+        /** 
+         * @param sessionId 
          * @param vacationDateSet 
          * @param vacationSuspendOn 
          * @param vacationResumeOn 
@@ -15558,6 +15675,13 @@ export const WineGeniusApiFactory = function (fetch?: FetchAPI, basePath?: strin
          */
         wineGeniusHandleGetVacation(params: {  "sessionId": string; "vacationDateSet"?: Date; "vacationSuspendOn"?: Date; "vacationResumeOn"?: Date; "vacationVacationGuid"?: string; }, options?: any) {
             return WineGeniusApiFp.wineGeniusHandleGetVacation(params, options)(fetch, basePath);
+        },
+        /** 
+         * @param sessionId 
+         * @param message 
+         */
+        wineGeniusHandlePostMessage(params: {  "sessionId": string; "message": WineGeniusMessage; }, options?: any) {
+            return WineGeniusApiFp.wineGeniusHandlePostMessage(params, options)(fetch, basePath);
         },
         /** 
          * @param sessionId 
